@@ -1,0 +1,14 @@
+
+.carousel-item img {
+    max-height: 300px; /* Ajusta esta altura según tus necesidades */
+    width: auto; /* Mantener proporción de aspecto */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+  }
+
+   .p{
+    width: 100%;
+    height: 50dvh;
+  }
+    
+    
+  

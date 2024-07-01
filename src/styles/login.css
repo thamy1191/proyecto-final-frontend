@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://media.gq.com.mx/photos/5f4d58354771415bd65686fa/16:9/w_1920,c_limit/proteina%20ejercicio.jpg'); /* Ajusta la ruta según donde hayas colocado tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgba(239, 235, 235, 0); 
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.login {
+    max-width: 300px;
+    margin-left: 10%;
+    margin-top: 10%;
+    padding: 20px;
+    border: 1px solid #96353550;
+    border-radius: 5px;
+    background-color: rgba(228, 161, 161, 0.187);
+    box-shadow: 10 10 10px rgba(105, 35, 35, 0.804);
+   
+}
+
+.login h3 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.login label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #f0eeeeea;
+    border-radius: 3px;
+    box-sizing: border-box;
+   
+}
+
+.login button {
+    background-color: #ea14145b;
+    color: white;
+    border: none;
+    padding: 5px 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.login button:hover {
+    background-color: #dc1c3c;
+}
+
+.login button a {
+    text-decoration: none;
+    color: white;
+}
+
+.login button a:hover {
+    text-decoration: underline;
+}

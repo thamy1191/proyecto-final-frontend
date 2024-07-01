@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import {useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import userGET from "../servicios/get";
+import usersGET from "../servicios/dataUsers/usersGet";
+import '../styles/login.css'
+
 
 function Loginform() {
     const [usu, setUsu] = useState("");
@@ -15,7 +17,7 @@ function Loginform() {
             setError("Por favor llene los campos");
         } else {
             try {
-                const datos = await userGET(); 
+                const datos = await usersGET(); 
                 console.log("datos", datos)
                 const user = datos.find((user) => user.usuario === usu)
                 console.log("usuario encontrado", user)

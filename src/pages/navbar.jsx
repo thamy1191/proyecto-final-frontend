@@ -1,4 +1,4 @@
-import NavScrollExample from "../componentes/homewelcome"
+import NavScrollExample from "../componentes/navbar"
 
 
 function Boots () {

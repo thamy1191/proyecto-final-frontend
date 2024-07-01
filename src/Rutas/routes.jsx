@@ -1,7 +1,12 @@
 import { Routes, Route } from "react-router-dom"
-import Home from "../pages/home"
 import Register from "../pages/register"
 import Login from "../pages/login"
+import Contacto from "../pages/contacto"
+import AboutUS from "../pages/aboutUS"
+import Suplements from "../pages/suplemento"
+import Homewe from "../pages/pagina"
+import Borrarproduc from "../pages/borrarproduc"
+import Añadirproduct from "../pages/añadirproduct"
 
 
 
@@ -13,8 +18,16 @@ const Rutas = () => {
     <div>
       <Routes>
                      <Route path='/registrar' element={<Register/>}   />
-                     <Route path='/inicio' element={<Home/>}   />
+                    
                      <Route path='/login'element ={<Login />} />
+                     <Route path='/aboutUs'element ={<AboutUS/>} />
+                     <Route path='/contacto'element ={<Contacto/>} />
+                     <Route path='/suplementos'element ={<Suplements/>} />
+                     <Route path='/inicio'element ={<Homewe/>} />
+                     <Route path='/delete'element ={< Borrarproduc/>} />
+                     <Route path='/añadir'element ={< Añadirproduct/>} />
+                     
+
                      
                       
             </Routes>

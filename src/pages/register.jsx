@@ -1,6 +1,4 @@
-
-
-import Register from '../componentes/registerform'
+import Register from "../componentes/registerform"
 
 function Logininicio() {
   return (

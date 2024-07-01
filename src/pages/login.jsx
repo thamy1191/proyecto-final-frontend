@@ -1,12 +1,12 @@
 
-import  Loginform from "../componentes/loginform"
-
+import Loginform from "../componentes/loginform"
 function Login() {
   return (
     <div>
     login
       < Loginform/>
-
+      
+      
     </div>
   )
 }

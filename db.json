@@ -1,17 +1,28 @@
 {
-  "productos": [
+  "dataUsers": [
     {
-      "id": "1",
-      "us": "vic",
-      "contraseña": "45"
+      "user": "Thamara",
+      "id": "71d6"
     },
     {
-      "id": "8204"
+      "id": "3f23"
     },
     {
-      "id": "021e",
-      "usuario": "roberto",
+      "id": "aece",
+      "usuario": "rosem",
       "contrasena": "22"
+    }
+  ],
+  "products": [
+    {
+      "suplementos": "proteína",
+      "id": "53d3"
+    },
+    {
+      "id": "f762"
+    },
+    {
+      "id": "12ed"
     }
   ]
 }

@@ -1,6 +1,7 @@
 import {useState } from "react"
 import { Link,useNavigate } from "react-router-dom"
-import AddPost from "../servicios/llamados"
+import usersPost from "../servicios/dataUsers/usersPost";
+
 
 function Registerform() {
   
@@ -16,7 +17,7 @@ const mostrar = async ()=>{
         return
     }else{
         try {
-            const datos = await AddPost(); 
+            const datos = await usersPost(); 
             console.log("datos", datos)
             const user = datos.find((user) => user.usuario === usuario)
             console.log("usuario encontrado", user)
@@ -33,7 +34,7 @@ const mostrar = async ()=>{
             setError("Error al intentar iniciar sesión");
         }
 
-        AddPost(usuario, contraseña)
+        usersPost(usuario, contraseña)
         console.log(usuario, contraseña)
         alert("registro exitoso")
     }
