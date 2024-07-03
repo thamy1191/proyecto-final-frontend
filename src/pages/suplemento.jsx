@@ -1,5 +1,5 @@
 import Suplemento from "../componentes/suplementos"
-import SectionSuplemento from "../componentes/SectionSuplemento"
+
 
 
 function Suplements() {
@@ -8,7 +8,7 @@ function Suplements() {
     
     <div>
      <Suplemento/>
-     <SectionSuplemento/>
+     
     </div>
   )
 }

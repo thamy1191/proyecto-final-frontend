@@ -1,6 +1,6 @@
 
 import DarkVariantExample from "./carrusel"
-import '../styles/homewelcome.css'
+// import '../styles/homewelcome.css'
 import p from '../assets/img/p.jpg'
 
 

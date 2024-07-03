@@ -1,24 +1,42 @@
 
-import Button from 'react-bootstrap/Button';
+
 import Card from 'react-bootstrap/Card';
-
-
-
-function suplemento() {
-  return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="https://www.mcguffmedical.com/content/images/thumbs/0002567_depo-medrol-methylprednisolone-acetate-40mgml-mdv-5ml-vial_550.jpeg" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    );
+import { productsGET } from '../servicios/products/productsGet';
+import { useState } from 'react';
+import { useEffect } from "react"
+//import "../css/card.css"
+const Suplemento= () => {
+  const [products, setProducts] = useState([])
+  const obtenerProductos  = async ()  => {
+     const productosObtenidos = await productsGET()
+    setProducts(productosObtenidos)
   }
-  
- 
-
-export default suplemento;
+  useEffect(() => {
+    obtenerProductos()
+  }, []);
+  console.log(products);
+  return (
+    <div>
+      <div>
+        <h4>Productos Disponibles</h4>
+        <br />
+    </div>
+    <div className='productos'>
+       {products.map((produc, index) => (
+          <li key={index}>
+            <Card style={{ width: '14rem', fontFamily : "Sterling" }}>
+              <Card.Img variant="top" src= {produc.imgUrl} />
+              <Card.Body>
+                <Card.Title>{produc.NomProducto}</Card.Title>
+                <Card.Text>
+                  {produc.precio}  <br /> {produc.material} <br />
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </li>
+      ))}
+    </div>
+    </div>
+  )
+}
+export default Suplemento

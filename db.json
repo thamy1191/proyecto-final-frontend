@@ -13,5 +13,20 @@
       "contrasena": "22"
     }
   ],
-  "products": []
+  "products": [
+    {
+      "id": "41e6",
+      "nombre": "creatina",
+      "precio": "22000",
+      "descripcion": "cdvsdv",
+      "url": "kldwokwp"
+    },
+    {
+      "id": "4c21",
+      "nombre": "amino",
+      "precio": "25000",
+      "descripcion": "nsjxijdi",
+      "url": "https://www.goodlifecr.com/collections/aminoacidos-con-estimulantes/products/amino-energy"
+    }
+  ]
 }
