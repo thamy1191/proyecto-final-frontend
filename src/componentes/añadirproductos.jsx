@@ -1,10 +1,19 @@
 import  { useState, useEffect } from 'react';
-//import { productsPOST, productsDelete, productsPUT, productsGET } from '../servicios/products'; 
+import { productsGET } from '../servicios/products/productsGet';
+import productsPOST from "../servicios/products/productsPost"
+import ProductsPUT from '../servicios/products/productsPut';
+import ProductsDELETE from "../servicios/products/productsDelete"
+import '../styles/añadir.css'
+
+
 
 const AgregaProductos = () => {
+ 
   const [nombre, setNombre] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [precio, setPrecio] = useState('');
+  const [mensaje, setMensaje] = useState("")
+  const [imagen, setImagen] = useState('');
   const [productos, setProductos] = useState([]);
   const [modoEdicion, setModoEdicion] = useState(false);
   const [idEditando, setIdEditando] = useState(null);
@@ -16,7 +25,9 @@ const AgregaProductos = () => {
   const obtenerProductos = async () => {
     try {
       const data = await productsGET(); 
-      setProductos(data);
+      setProductos(data
+        
+      );
     } catch (error) {
       console.error('Error al obtener productos:', error);
       
@@ -24,31 +35,20 @@ const AgregaProductos = () => {
   };
 
   const agregarProducto = async () => {
-    if (!nombre.trim() || !descripcion.trim() || !precio.trim()) return;
-
-    try {
-      const nuevoProducto = { nombre, descripcion, precio };
-      await productsPOST(nuevoProducto); 
-
-      
+    if (!nombre.trim() && !descripcion.trim() && !precio.trim()) {
+          setMensaje("Agregar datos")
+    }else{
+      await productsPOST(nombre, precio ,descripcion, imagen); 
       obtenerProductos();
-
-      
       setNombre('');
       setDescripcion('');
       setPrecio('');
-    } catch (error) {
-      console.error('Error al agregar producto:', error);
     }
-  };
+  }
 
   const eliminarProducto = async (id) => {
-    try {
-      await productsDelete(id); 
+      await ProductsDELETE(id); 
       obtenerProductos();
-    } catch (error) {
-      console.error('Error al eliminar producto:', error);
-    }
   };
 
   const editarProducto = async () => {
@@ -56,11 +56,8 @@ const AgregaProductos = () => {
 
     try {
       const productoEditado = { nombre, descripcion, precio };
-      await productsPUT(idEditando, productoEditado); 
-
+      await ProductsPUT(idEditando, productoEditado); 
       obtenerProductos();
-
-      
       setNombre('');
       setDescripcion('');
       setPrecio('');
@@ -92,6 +89,7 @@ const AgregaProductos = () => {
   return (
     <div>
       <h1>Lista de Productos</h1>
+      <h4>{mensaje}</h4>
       <form onSubmit={handleAgregarEditar}>
         <input
           type="text"
@@ -111,6 +109,12 @@ const AgregaProductos = () => {
           value={precio}
           onChange={(e) => setPrecio(e.target.value)}
         />
+        <input
+          type="text"
+          placeholder="Imagen"
+          value={imagen}
+          onChange={(e) => setImagen(e.target.value)}
+        />
         <button type="submit">{modoEdicion ? 'Editar Producto' : 'Agregar Producto'}</button>
         {modoEdicion && (
           <button type="button" onClick={() => {
@@ -129,11 +133,13 @@ const AgregaProductos = () => {
             {producto.nombre} - {producto.descripcion} - ${producto.precio}
             <button onClick={() => handleEditar(producto)}>Editar</button>
             <button onClick={() => eliminarProducto(producto.id)}>Eliminar</button>
+            <img src={producto.url} alt="" style={{width : "100px"}} />
           </li>
         ))}
       </ul>
     </div>
   );
+
 };
 
-export default AgregaProductos;
+export default AgregaProductos 

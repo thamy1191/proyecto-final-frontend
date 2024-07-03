@@ -37,6 +37,10 @@ function Loginform() {
     };
 
     return (
+<div className="pad">
+
+        <div className="log">
+
         <div className="login">
             <h3>{error}</h3>
             <h3>{msg}</h3>
@@ -49,6 +53,9 @@ function Loginform() {
             <button><Link to='/registrar'>Ir a registrarme</Link></button>
             <button onClick={envioInicio}>Iniciar</button>
         </div>
+        </div>
+</div>
+
     );
 }
 

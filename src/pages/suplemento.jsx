@@ -1,11 +1,16 @@
 import Suplemento from "../componentes/suplementos"
 
-function suplements() {
+
+
+function Suplements() {
+
   return (
+    
     <div>
      <Suplemento/>
+     
     </div>
   )
 }
 
-export default suplements
+export default Suplements

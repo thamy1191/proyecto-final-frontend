@@ -1,7 +1,7 @@
 const products_API = 'http://localhost:3002/products'
 
 
-export async function PUT(id, taskData) {
+export async function ProductsPUT(id, taskData) {
     const response = await fetch(products_API + id, {
         method: 'PUT',
         headers: {
@@ -13,3 +13,5 @@ export async function PUT(id, taskData) {
         console.log('Cambió');
     }
 }
+
+export default ProductsPUT

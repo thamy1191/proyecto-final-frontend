@@ -1,13 +1,25 @@
 
 import Loginform from "../componentes/loginform"
+import "../styles/loginPage.css"
+// import fit from "../img/hom.webp"
+
 function Login() {
   return (
-    <div>
-    login
-      < Loginform/>
+    
+
+<div className="log">
+{/* <img className="fit" src={fit} alt="" /> */}
+< Loginform/>
+</div>
+
+//     <div>
+// <div>
+//   <img src={fit} alt="" />
+// </div>
+//       < Loginform/>
       
       
-    </div>
+//     </div>
   )
 }
 

@@ -1,6 +1,6 @@
-import NavScrollExample from "./navbar"
+
 import DarkVariantExample from "./carrusel"
-import '../styles/homewelcome.css'
+// import '../styles/homewelcome.css'
 import p from '../assets/img/p.jpg'
 
 
@@ -8,7 +8,7 @@ import p from '../assets/img/p.jpg'
 function homewelcome() {
   return (
     <div>
-      <NavScrollExample/>
+     
       
       <img src={p} className="p"/>
 

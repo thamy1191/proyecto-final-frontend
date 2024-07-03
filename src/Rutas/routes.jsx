@@ -5,11 +5,7 @@ import Contacto from "../pages/contacto"
 import AboutUS from "../pages/aboutUS"
 import Suplements from "../pages/suplemento"
 import Homewe from "../pages/pagina"
-import Borrarproduc from "../pages/borrarproduc"
 import Añadirproduct from "../pages/añadirproduct"
-
-
-
 
 
 
@@ -24,7 +20,6 @@ const Rutas = () => {
                      <Route path='/contacto'element ={<Contacto/>} />
                      <Route path='/suplementos'element ={<Suplements/>} />
                      <Route path='/inicio'element ={<Homewe/>} />
-                     <Route path='/delete'element ={< Borrarproduc/>} />
                      <Route path='/añadir'element ={< Añadirproduct/>} />
                      
 

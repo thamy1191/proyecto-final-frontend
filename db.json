@@ -15,14 +15,18 @@
   ],
   "products": [
     {
-      "suplementos": "proteína",
-      "id": "53d3"
+      "id": "41e6",
+      "nombre": "creatina",
+      "precio": "22000",
+      "descripcion": "cdvsdv",
+      "url": "kldwokwp"
     },
     {
-      "id": "f762"
-    },
-    {
-      "id": "12ed"
+      "id": "4c21",
+      "nombre": "amino",
+      "precio": "25000",
+      "descripcion": "nsjxijdi",
+      "url": "https://www.goodlifecr.com/collections/aminoacidos-con-estimulantes/products/amino-energy"
     }
   ]
 }

@@ -1,11 +1,12 @@
 
 import Rutas from './Rutas/routes'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar } from 'react-bootstrap';
+import NavScrollExample from './componentes/navbar';
+
 const App = () => {
   return (
     <div>
-     <Navbar/>
+     <NavScrollExample/>
       <Rutas/>
     </div>
   )

@@ -1,38 +1,42 @@
-import Button from 'react-bootstrap/Button';
+
+
 import Card from 'react-bootstrap/Card';
-import Placeholder from 'react-bootstrap/Placeholder';
-
-function suplemento() {
+import { productsGET } from '../servicios/products/productsGet';
+import { useState } from 'react';
+import { useEffect } from "react"
+//import "../css/card.css"
+const Suplemento= () => {
+  const [products, setProducts] = useState([])
+  const obtenerProductos  = async ()  => {
+     const productosObtenidos = await productsGET()
+    setProducts(productosObtenidos)
+  }
+  useEffect(() => {
+    obtenerProductos()
+  }, []);
+  console.log(products);
   return (
-    <div className="d-flex justify-content-around">
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
-        </Card.Body>
-        
-      </Card>
-
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Placeholder as={Card.Title} animation="glow">
-            <Placeholder xs={6} />
-          </Placeholder>
-          <Placeholder as={Card.Text} animation="glow">
-            <Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />{' '}
-            <Placeholder xs={6} /> <Placeholder xs={8} />
-          </Placeholder>
-          <Placeholder.Button variant="primary" xs={6} />
-        </Card.Body>
-      </Card>
+    <div>
+      <div>
+        <h4>Productos Disponibles</h4>
+        <br />
     </div>
-  );
+    <div className='productos'>
+       {products.map((produc, index) => (
+          <li key={index}>
+            <Card style={{ width: '14rem', fontFamily : "Sterling" }}>
+              <Card.Img variant="top" src= {produc.imgUrl} />
+              <Card.Body>
+                <Card.Title>{produc.NomProducto}</Card.Title>
+                <Card.Text>
+                  {produc.precio}  <br /> {produc.material} <br />
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </li>
+      ))}
+    </div>
+    </div>
+  )
 }
-
-export default suplemento;
+export default Suplemento
