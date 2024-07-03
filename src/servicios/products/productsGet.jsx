@@ -5,5 +5,3 @@ export async function productsGET() {
     const data = await response.json();
     return data
 }
-
-

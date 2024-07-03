@@ -2,7 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('https://media.gq.com.mx/photos/5f4d58354771415bd65686fa/16:9/w_1920,c_limit/proteina%20ejercicio.jpg'); /* Ajusta la ruta según donde hayas colocado tu imagen */
+    /* background-image: url('https://media.gq.com.mx/photos/5f4d58354771415bd65686fa/16:9/w_1920,c_limit/proteina%20ejercicio.jpg'); */
+     /* Ajusta la ruta según donde hayas colocado tu imagen */
     background-size: cover;
     background-position: center;
     height: 100vh; 
@@ -22,7 +23,7 @@ body {
 .login {
     max-width: 300px;
     margin-left: 10%;
-    margin-top: 10%;
+     /* margin-top: 10%;  */
     padding: 20px;
     border: 1px solid #96353550;
     border-radius: 5px;
@@ -76,3 +77,23 @@ body {
 .login button a:hover {
     text-decoration: underline;
 }
+
+.log{
+    height: 1000px;
+    width: 100%;
+    /* background-color: black; */
+    /* background-image: url("../img/hom.webp"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+
+    .pad{
+padding: 10%;
+height: 1000px;
+width: 100%;
+/* background-color: black; */
+background-image: url("../img/hom.webp");
+background-size: cover;
+background-repeat: no-repeat;
+
+    }

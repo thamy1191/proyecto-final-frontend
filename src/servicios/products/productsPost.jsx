@@ -1,19 +1,21 @@
-
-const ApiUsers_Api = 'http://localhost:3002/products'
-
-const usersPost = async () => { // funcion del metodo GET
+const productsPOST = async (nombre, precio, descripcion, url) => { // funcion del metodo POST
     try {
-        const response = await fetch(ApiUsers_Api, {
-        method: 'Post',
+        const response = await fetch('http://localhost:3002/products', {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
+            body: JSON.stringify({
+               nombre : nombre,
+               precio : precio,
+               descripcion : descripcion,
+               url : url
+            })
         });
         const data = await response.json();
-        return(data)
+        return data
         } catch(error) {
         console.log(error)
     } 
 }
-
-export default usersPost 
+export default productsPOST

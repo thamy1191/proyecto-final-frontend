@@ -13,16 +13,5 @@
       "contrasena": "22"
     }
   ],
-  "products": [
-    {
-      "suplementos": "proteína",
-      "id": "53d3"
-    },
-    {
-      "id": "f762"
-    },
-    {
-      "id": "12ed"
-    }
-  ]
+  "products": []
 }

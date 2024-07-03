@@ -1,11 +1,16 @@
 import Suplemento from "../componentes/suplementos"
+import SectionSuplemento from "../componentes/SectionSuplemento"
 
-function suplements() {
+
+function Suplements() {
+
   return (
+    
     <div>
      <Suplemento/>
+     <SectionSuplemento/>
     </div>
   )
 }
 
-export default suplements
+export default Suplements

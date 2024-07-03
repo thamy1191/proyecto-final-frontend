@@ -1,7 +1,7 @@
-const products_API = 'http://localhost:3002/products'
+const products_API = 'http://localhost:3002/products/'
 
 
-export async function DELETE(id) {
+export async function ProductsDELETE(id) {
     const response = await fetch(products_API + id, {
         method: 'DELETE',
     });
@@ -9,3 +9,5 @@ export async function DELETE(id) {
         console.log('Borrado');
     }
 }
+
+export default ProductsDELETE

@@ -5,7 +5,7 @@ import usersPost from "../servicios/dataUsers/usersPost";
 
 function Registerform() {
   
-      const [usuario, setUsuario] = useState("")
+    const [usuario, setUsuario] = useState("")
     const [contraseña, setContraseña] = useState("")
     const [error, setError] = useState("")
     const navigate = useNavigate()
