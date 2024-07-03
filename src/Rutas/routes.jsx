@@ -19,7 +19,7 @@ const Rutas = () => {
                      <Route path='/aboutUs'element ={<AboutUS/>} />
                      <Route path='/contacto'element ={<Contacto/>} />
                      <Route path='/suplementos'element ={<Suplements/>} />
-                     <Route path='/inicio'element ={<Homewe/>} />
+                     <Route path='/home'element ={<Homewe/>} />
                      <Route path='/añadir'element ={< Añadirproduct/>} />
                      
 

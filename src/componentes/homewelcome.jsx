@@ -1,7 +1,5 @@
 
 import DarkVariantExample from "./carrusel"
-// import '../styles/homewelcome.css'
-import p from '../assets/img/p.jpg'
 
 
 
@@ -10,7 +8,7 @@ function homewelcome() {
     <div>
      
       
-      <img src={p} className="p"/>
+      <img className="homeimg" src='https://c4.wallpaperflare.com/wallpaper/95/686/440/training-gyms-motivational-typography-wallpaper-preview.jpg' />
 
        <h1>los mas vistos</h1>
 

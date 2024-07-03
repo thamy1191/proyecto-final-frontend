@@ -8,7 +8,7 @@ function Login() {
     
 
 <div className="log">
-{/* <img className="fit" src={fit} alt="" /> */}
+  {/* <img className="fit" src={} alt="" />  */}
 < Loginform/>
 </div>
 
