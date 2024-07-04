@@ -1,4 +1,4 @@
-const productsPOST = async (nombre, precio, descripcion, url) => { // funcion del metodo POST
+const productsPOST = async (nombre, precio, descripcion, url) => { 
     try {
         const response = await fetch('http://localhost:3002/products', {
         method: 'POST',

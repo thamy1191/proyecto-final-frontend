@@ -129,12 +129,12 @@ const AgregaProductos = () => {
       
       <ul>
         {productos.map((producto) => (
-          <li key={producto.id}>
+          <ul key={producto.id}>
             {producto.nombre} - {producto.descripcion} - ${producto.precio}
             <button onClick={() => handleEditar(producto)}>Editar</button>
             <button onClick={() => eliminarProducto(producto.id)}>Eliminar</button>
             <img src={producto.url} alt="" style={{width : "100px"}} />
-          </li>
+          </ul>
         ))}
       </ul>
     </div>

@@ -88,11 +88,11 @@ body {
     }
 
     .pad{
-padding: 10%;
-height: 1000px;
+padding: 5%;
+height: 600px;
 width: 100%;
-/* background-color: black; */
-background-image: url("../img/hom.webp");
+
+background-image: url("../img/fitness_720.png");
 background-size: cover;
 background-repeat: no-repeat;
 

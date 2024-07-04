@@ -23,7 +23,7 @@ const Suplemento= () => {
     </div>
     <div className='productos'>
        {products.map((produc, index) => (
-          <li key={index}>
+          <ul key={index}>
             <Card style={{ width: '14rem', fontFamily : "Sterling" }}>
               <Card.Img variant="top" src= {produc.url} />
               <Card.Body>
@@ -33,7 +33,7 @@ const Suplemento= () => {
                 </Card.Text>
               </Card.Body>
             </Card>
-          </li>
+          </ul>
       ))}
     </div>
     </div>

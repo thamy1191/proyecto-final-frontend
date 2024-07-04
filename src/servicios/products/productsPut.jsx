@@ -1,4 +1,4 @@
-const products_API = 'http://localhost:3002/products'
+const products_API = 'http://localhost:3002/products/'
 
 
 export async function ProductsPUT(id, taskData) {

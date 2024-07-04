@@ -7,16 +7,16 @@ function DarkVariantExample() {
 //DAR ESTILO AL CARRUSEL DE IMAGENES
 const CarruselStyle = { 
  
-height: "500px",
-width: "500px"
+height: "300px",
+width: "300px"
 
 }
 
 
 //DAR ESTILO A LA IMAGEN
 const ImageSize =  { 
-maxWidth: "500px",
-maxHeight: "500px",
+maxWidth: "300px",
+maxHeight: "300px",
 }
 
 

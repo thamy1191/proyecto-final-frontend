@@ -15,13 +15,6 @@
   ],
   "products": [
     {
-      "id": "b315",
-      "nombre": "jjjjjjjjj",
-      "precio": "6yrf",
-      "descripcion": "ju",
-      "url": "https://www.goodlifecr.com/cdn/shop/files/aminodecanatestrw_720x.jpg?v=1710974017"
-    },
-    {
       "id": "7d33",
       "nombre": "kjdswjefcf",
       "precio": "edkeok",
@@ -34,6 +27,20 @@
       "precio": "22000",
       "descripcion": "kdocd",
       "url": "https://www.goodlifecr.com/cdn/shop/products/jnxcreatina_900x.jpg?v=1679504470"
+    },
+    {
+      "id": "8956",
+      "nombre": "creatina",
+      "precio": "27500",
+      "descripcion": "monohidatada",
+      "url": "https://www.goodlifecr.com/cdn/shop/files/aminoblue30_2_900x.jpg?v=1697923262"
+    },
+    {
+      "id": "52c3",
+      "nombre": "NLKDCJLSDL",
+      "precio": "",
+      "descripcion": "NDJN",
+      "url": ""
     }
   ]
 }
