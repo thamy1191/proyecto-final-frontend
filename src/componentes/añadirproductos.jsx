@@ -3,7 +3,9 @@ import { productsGET } from '../servicios/products/productsGet';
 import productsPOST from "../servicios/products/productsPost"
 import ProductsPUT from '../servicios/products/productsPut';
 import ProductsDELETE from "../servicios/products/productsDelete"
-import '../styles/añadir.css'
+ import '../styles/añadir.css'
+
+
 
 
 
@@ -74,6 +76,7 @@ const AgregaProductos = () => {
     if (modoEdicion) {
       editarProducto();
     } else {
+      
       agregarProducto();
     }
   };
@@ -87,7 +90,8 @@ const AgregaProductos = () => {
   };
 
   return (
-    <div>
+    
+    <div className="img">
       <h1>Lista de Productos</h1>
       <h4>{mensaje}</h4>
       <form onSubmit={handleAgregarEditar}>

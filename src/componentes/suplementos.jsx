@@ -1,10 +1,10 @@
-
-
 import Card from 'react-bootstrap/Card';
 import { productsGET } from '../servicios/products/productsGet';
 import { useState } from 'react';
 import { useEffect } from "react"
 import '../styles/suplementos.css'
+
+
 const Suplemento= () => {
   const [products, setProducts] = useState([])
   const obtenerProductos  = async ()  => {
