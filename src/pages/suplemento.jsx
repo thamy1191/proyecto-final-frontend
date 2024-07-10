@@ -1,4 +1,5 @@
 import Suplemento from "../componentes/suplementos"
+import ListaElementos from "../componentes/filtro"
 
 function Suplements() {
 
@@ -6,6 +7,7 @@ function Suplements() {
     
     <div>
      <Suplemento/>
+     <ListaElementos/>
          
     </div>
   )
