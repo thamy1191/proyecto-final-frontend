@@ -1,30 +1,30 @@
 import {useState } from "react"
 import { Link,useNavigate } from "react-router-dom"
-import usersPost from "../servicios/dataUsers/usersPost";
+import usersPost from "../servicios/dataUsers/usersPost"
 
 
 function Registerform() {
   
     const [usuario, setUsuario] = useState("")
-    const [contraseña, setContraseña] = useState("")
+    const [contrasena, setContraseña] = useState("")
     const [error, setError] = useState("")
     const navigate = useNavigate()
 
 const mostrar = async ()=>{
     
-    if (usuario.trim("") === "" && contraseña.trim("") === "") {
+    if (usuario.trim("") === "" && contrasena.trim("") === "") {
         setError("Ingrese un texto")
         return
     }else{
         try {
-            const datos = await usersPost(); 
+            const datos = await usersPost(usuario, contrasena); 
             console.log("datos", datos)
-            const user = datos.find((user) => user.usuario === usuario)
+            const user = datos.find((user) => user.usuario === usuario )
             console.log("usuario encontrado", user)
             if (user) {
-                if (user.contrasena === contraseña) {
+                if (user.contrasena === contrasena) {
                   setError("Inicio de sesión exitoso");
-                    navigate("/inicio")
+                    navigate("/login")
                 } else {
                   setError("Usuario y contraseña no coinciden");
                 }
@@ -33,9 +33,6 @@ const mostrar = async ()=>{
             console.error(error);
             setError("Error al intentar iniciar sesión");
         }
-
-        usersPost(usuario, contraseña)
-        console.log(usuario, contraseña)
         alert("registro exitoso")
     }
 }
@@ -47,7 +44,7 @@ const mostrar = async ()=>{
         <input type="text" value={usuario} onChange={e => setUsuario(e.target.value)}/>
         <br /><br />
         <label htmlFor="">contraseña : </label>
-        <input type="text" value={contraseña} onChange={e => setContraseña(e.target.value)}/>
+        <input type="text" value={contrasena} onChange={e => setContraseña(e.target.value)}/>
         <br /><br />
         <button onClick={mostrar}><Link to='/login'>registar usuario</Link></button>
 

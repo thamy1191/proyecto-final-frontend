@@ -1,33 +1,22 @@
 {
   "dataUsers": [
     {
-      "user": "Thamara",
-      "id": "71d6"
-    },
-    {
-      "id": "3f23"
-    },
-    {
       "id": "aece",
       "usuario": "rosem",
       "contrasena": "22"
+    },
+    {
+      "id": "e303",
+      "usuario": "gary",
+      "contrasena": "1234"
+    },
+    {
+      "id": "f526",
+      "usuario": "rose",
+      "contrasena": "12"
     }
   ],
   "products": [
-    {
-      "id": "6434",
-      "nombre": "aminio",
-      "precio": "26500",
-      "descripcion": "gysuwhi",
-      "url": "https://www.goodlifecr.com/cdn/shop/files/aminodecanatestrw_900x.jpg?v=1710974017"
-    },
-    {
-      "id": "8965",
-      "nombre": "creatina",
-      "precio": "22500",
-      "descripcion": "nasxjidcj",
-      "url": "https://www.goodlifecr.com/cdn/shop/products/jnxcreatina_900x.jpg?v=1679504470"
-    },
     {
       "id": "73f5",
       "nombre": "proteina",

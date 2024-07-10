@@ -51,11 +51,12 @@ const AgregaProductos = () => {
   const eliminarProducto = async (id) => {
       await ProductsDELETE(id); 
       obtenerProductos();
+      setMensaje("Agregar datos")
+
   };
 
   const editarProducto = async () => {
     if (!nombre.trim() || !descripcion.trim() || !precio.trim()) return;
-
     try {
       const productoEditado = { nombre, descripcion, precio };
       await ProductsPUT(idEditando, productoEditado); 

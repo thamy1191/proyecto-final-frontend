@@ -3,9 +3,30 @@
 import "../styles/añadir.css"
 
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { UsarContexto } from "../context/ContextProvider";
 
 
 function NavScrollExample() {
+  const { admin, setAdmin } = UsarContexto()
+  
+  const [boton, setBoton] = useState("none")
+  const [ver, setVer] = useState("none")
+
+  useEffect(() => {
+    if (localStorage.getItem("Admi-id") === "Admi") {
+      setBoton("block")
+      setVer('block')
+    } else {
+      setVer('none')
+      setBoton("none")
+    }
+  },[admin])
+
+  function quitar() {
+    localStorage.removeItem("Admi-id")
+    setAdmin(admin + 1)
+  }
 
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" >
@@ -47,7 +68,7 @@ function NavScrollExample() {
         
           {/* <a className="nav-link" href="/añadir" style={{color: "white"}}>Administracion</a> */}
           <Link
-             className="nav-link" style={{color: "white"}}
+             className="nav-link" style={{color: "white"  ,display: ver}}
           to="/añadir"
           
         >
@@ -82,8 +103,11 @@ function NavScrollExample() {
           <p>Cuenta</p>
         </Link>
        
-       
-       
+        </li>
+        <li>
+           <Link to={"/home"}>
+            <button onClick={quitar} style={{display : boton}}>Salir</button>
+          </Link>
         </li>
         
         
