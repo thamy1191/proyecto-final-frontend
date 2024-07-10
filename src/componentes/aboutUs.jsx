@@ -1,13 +1,13 @@
 
-import Fit from '../assets/img/Fit.jpg'
-import '../styles/about.css'
+// import Fit from '../img/p.jpg'
+// import '../styles/about.css'
 
 function About() {
  
   return (
 
     <div>
-        <img src={Fit}/>
+        {/* <img src={Fit}/> */}
         <app className="css">imagen</app>
        
 

@@ -1,20 +1,20 @@
-
-
-const ApiUsers_Api = 'http://localhost:3002/dataUsers'
-
-const usersPost = async () => { // funcion del metodo GET
+const usersPost = async (usuario, contrasena) => { 
     try {
-        const response = await fetch(ApiUsers_Api, {
-        method: 'Post',
+        const response = await fetch('http://localhost:3002/dataUsers', {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
+            body: JSON.stringify({
+              usuario: usuario ,
+              contrasena :contrasena ,
+            })
         });
         const data = await response.json();
-        return(data)
+        return data
         } catch(error) {
         console.log(error)
     } 
 }
-
 export default usersPost
+

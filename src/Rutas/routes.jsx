@@ -6,6 +6,8 @@ import AboutUS from "../pages/aboutUS"
 import Suplements from "../pages/suplemento"
 import Homewe from "../pages/pagina"
 import Añadirproduct from "../pages/añadirproduct"
+import RutaPrivada from "./RutaPrivada"
+
 
 
 
@@ -14,13 +16,24 @@ const Rutas = () => {
     <div>
       <Routes>
                      <Route path='/registrar' element={<Register/>}   />
-                    
                      <Route path='/login'element ={<Login />} />
                      <Route path='/aboutUs'element ={<AboutUS/>} />
                      <Route path='/contacto'element ={<Contacto/>} />
                      <Route path='/suplementos'element ={<Suplements/>} />
-                     <Route path='/inicio'element ={<Homewe/>} />
-                     <Route path='/añadir'element ={< Añadirproduct/>} />
+                     <Route path='/home'element ={<Homewe/>} />
+                      <Route path="/añadirproduct"  element = { <RutaPrivada >
+                        <Añadirproduct />
+                      </RutaPrivada>}/>
+
+
+
+
+
+
+
+
+                     
+
                      
 
                      

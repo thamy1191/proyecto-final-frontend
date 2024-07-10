@@ -3,7 +3,9 @@ import { productsGET } from '../servicios/products/productsGet';
 import productsPOST from "../servicios/products/productsPost"
 import ProductsPUT from '../servicios/products/productsPut';
 import ProductsDELETE from "../servicios/products/productsDelete"
-import '../styles/añadir.css'
+ import '../styles/añadir.css'
+
+
 
 
 
@@ -49,11 +51,12 @@ const AgregaProductos = () => {
   const eliminarProducto = async (id) => {
       await ProductsDELETE(id); 
       obtenerProductos();
+      setMensaje("Agregar datos")
+
   };
 
   const editarProducto = async () => {
     if (!nombre.trim() || !descripcion.trim() || !precio.trim()) return;
-
     try {
       const productoEditado = { nombre, descripcion, precio };
       await ProductsPUT(idEditando, productoEditado); 
@@ -74,6 +77,7 @@ const AgregaProductos = () => {
     if (modoEdicion) {
       editarProducto();
     } else {
+      
       agregarProducto();
     }
   };
@@ -87,7 +91,8 @@ const AgregaProductos = () => {
   };
 
   return (
-    <div>
+    
+    <div className="img">
       <h1>Lista de Productos</h1>
       <h4>{mensaje}</h4>
       <form onSubmit={handleAgregarEditar}>
@@ -129,12 +134,12 @@ const AgregaProductos = () => {
       
       <ul>
         {productos.map((producto) => (
-          <li key={producto.id}>
+          <ul key={producto.id}>
             {producto.nombre} - {producto.descripcion} - ${producto.precio}
             <button onClick={() => handleEditar(producto)}>Editar</button>
             <button onClick={() => eliminarProducto(producto.id)}>Eliminar</button>
             <img src={producto.url} alt="" style={{width : "100px"}} />
-          </li>
+          </ul>
         ))}
       </ul>
     </div>

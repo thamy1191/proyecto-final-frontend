@@ -1,10 +1,10 @@
-
-
 import Card from 'react-bootstrap/Card';
 import { productsGET } from '../servicios/products/productsGet';
 import { useState } from 'react';
 import { useEffect } from "react"
-//import "../css/card.css"
+import '../styles/suplementos.css'
+
+
 const Suplemento= () => {
   const [products, setProducts] = useState([])
   const obtenerProductos  = async ()  => {
@@ -23,9 +23,9 @@ const Suplemento= () => {
     </div>
     <div className='productos'>
        {products.map((produc, index) => (
-          <li key={index}>
+          <ul key={index}>
             <Card style={{ width: '14rem', fontFamily : "Sterling" }}>
-              <Card.Img variant="top" src= {produc.imgUrl} />
+              <Card.Img variant="top" src= {produc.url} />
               <Card.Body>
                 <Card.Title>{produc.NomProducto}</Card.Title>
                 <Card.Text>
@@ -33,7 +33,7 @@ const Suplemento= () => {
                 </Card.Text>
               </Card.Body>
             </Card>
-          </li>
+          </ul>
       ))}
     </div>
     </div>

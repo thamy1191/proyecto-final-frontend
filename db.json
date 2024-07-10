@@ -1,32 +1,28 @@
 {
   "dataUsers": [
     {
-      "user": "Thamara",
-      "id": "71d6"
-    },
-    {
-      "id": "3f23"
-    },
-    {
       "id": "aece",
       "usuario": "rosem",
       "contrasena": "22"
+    },
+    {
+      "id": "e303",
+      "usuario": "gary",
+      "contrasena": "1234"
+    },
+    {
+      "id": "f526",
+      "usuario": "rose",
+      "contrasena": "12"
     }
   ],
   "products": [
     {
-      "id": "41e6",
-      "nombre": "creatina",
-      "precio": "22000",
-      "descripcion": "cdvsdv",
-      "url": "kldwokwp"
-    },
-    {
-      "id": "4c21",
-      "nombre": "amino",
-      "precio": "25000",
-      "descripcion": "nsjxijdi",
-      "url": "https://www.goodlifecr.com/collections/aminoacidos-con-estimulantes/products/amino-energy"
+      "id": "73f5",
+      "nombre": "proteina",
+      "precio": "35000",
+      "descripcion": "njoijkolkñ",
+      "url": "https://www.goodlifecr.com/cdn/shop/files/wheygoldstandar2lbras_900x.jpg?v=1698524205"
     }
   ]
 }

@@ -1,17 +1,55 @@
+import  { useState } from 'react';
+import "../styles/contact.css"
 
+const Contacto = () => {
+  const [nombre, setNombre] = useState('');
+  const [email, setEmail] = useState('');
+  const [mensaje, setMensaje] = useState('');
 
-function contacto() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    console.log('Formulario enviado:', { nombre, email, mensaje });
+    
+    setNombre('');
+    setEmail('');
+    setMensaje('');
+  };
+
   return (
-    <div>
-      
-        <h1>Whether you have a question about our technical content, job proposals, inquiries or questions related to the blog, feel free to write us directly.
-
-Important: Due to the constant spam to the embed contact form on the website, we decided to remove it. If you want to contact us, you only need to write us at the following email address:
-
-Email: dev@ourcodeworld.com</h1>
-      
+    <div className="contacto-container"> 
+      <h1>Contáctanos</h1>
+      <form className="contacto-form" onSubmit={handleSubmit}> 
+        <div>
+          <label>Nombre:</label>
+          <input
+            type="text"
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label>Email:</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label>Mensaje:</label>
+          <textarea
+            value={mensaje}
+            onChange={(e) => setMensaje(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
     </div>
-  )
-}
+  );
+};
 
-export default contacto
+export default Contacto;

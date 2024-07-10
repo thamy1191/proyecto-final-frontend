@@ -2,9 +2,11 @@ import {useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import usersGET from "../servicios/dataUsers/usersGet";
 import '../styles/login.css'
+import { UsarContexto } from "../context/ContextProvider";
 
 
 function Loginform() {
+const { admin, setAdmin } = UsarContexto()
     const [usu, setUsu] = useState("");
     const [conta, setConta] = useState("");
     const [error, setError] = useState("");
@@ -12,10 +14,23 @@ function Loginform() {
     const navigate = useNavigate()
 
     const envioInicio = async () => {
+     
+        const admi = {
+            id : "Admi",
+            usuario : "admi-Thama",
+            contrasena : "thama1234"
+        }
         
         if (usu.trim() === "" || conta.trim() === "") {
             setError("Por favor llene los campos");
         } else {
+            if (admi.usuario === usu && admi.contrasena === conta) {
+                setAdmin(admin + 1)
+                alert("bienvenido admi")
+                navigate("/añadirproduct")
+                localStorage.setItem("Admi-id", admi.id)
+               
+            }
             try {
                 const datos = await usersGET(); 
                 console.log("datos", datos)
