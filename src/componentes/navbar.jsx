@@ -31,7 +31,7 @@ function NavScrollExample() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" >
   <div className="container-fluid" >
-    {/* <a className="navbar-brand" href="home" style={{color: "white"}}>Home </a> */}
+    
     <Link 
 
      className="nav-link" style={{color: "white"}}
@@ -69,7 +69,7 @@ function NavScrollExample() {
           {/* <a className="nav-link" href="/añadir" style={{color: "white"}}>Administracion</a> */}
           <Link
              className="nav-link" style={{color: "white"  ,display: ver}}
-          to="/añadir"
+          to="/añadirproduct"
           
         >
           <p>Administracion</p>
@@ -102,6 +102,20 @@ function NavScrollExample() {
         >
           <p>Cuenta</p>
         </Link>
+
+
+        </li>
+        <li className="nav-item">
+          {/* <a className="nav-link" href="/login" style={{color: "white"}}>Cuenta</a> */}
+       
+          <Link
+             className="nav-link" style={{color: "white"}}
+          to="/aboutUs"
+          
+        >
+          <p>About</p>
+        </Link>
+
        
         </li>
         <li>

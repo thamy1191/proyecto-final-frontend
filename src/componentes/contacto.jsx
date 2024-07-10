@@ -1,6 +1,5 @@
-
-
 import  { useState } from 'react';
+import "../styles/contact.css"
 
 const Contacto = () => {
   const [nombre, setNombre] = useState('');
@@ -9,18 +8,18 @@ const Contacto = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí podrías agregar lógica para enviar el formulario (por ejemplo, a través de una API)
+    
     console.log('Formulario enviado:', { nombre, email, mensaje });
-    // Aquí podrías resetear los estados de los inputs después de enviar el formulario
+    
     setNombre('');
     setEmail('');
     setMensaje('');
   };
 
   return (
-    <div>
+    <div className="contacto-container"> 
       <h1>Contáctanos</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="contacto-form" onSubmit={handleSubmit}> 
         <div>
           <label>Nombre:</label>
           <input
