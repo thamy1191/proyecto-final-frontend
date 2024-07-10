@@ -27,9 +27,11 @@ const Suplemento= () => {
             <Card style={{ width: '14rem', fontFamily : "Sterling" }}>
               <Card.Img variant="top" src= {produc.url} />
               <Card.Body>
-                <Card.Title>{produc.NomProducto}</Card.Title>
+                <Card.Title>{produc.nombre}</Card.Title>
                 <Card.Text>
+                {produc.descripcion}  <br /> {produc.material} <br />
                   {produc.precio}  <br /> {produc.material} <br />
+
                 </Card.Text>
               </Card.Body>
             </Card>

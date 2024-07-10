@@ -56,9 +56,9 @@ const AgregaProductos = () => {
   };
 
   const editarProducto = async () => {
-    if (!nombre.trim() || !descripcion.trim() || !precio.trim()) return;
+    if (!nombre.trim() || !descripcion.trim() || !precio.trim()  || !imagen.trim())return;
     try {
-      const productoEditado = { nombre, descripcion, precio };
+      const productoEditado = { nombre, descripcion, precio,imagen };
       await ProductsPUT(idEditando, productoEditado); 
       obtenerProductos();
       setNombre('');

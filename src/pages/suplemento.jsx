@@ -8,6 +8,7 @@ function Suplements() {
     <div>
      <Suplemento/>
      <ListaElementos/>
+     
          
     </div>
   )

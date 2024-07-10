@@ -18,11 +18,53 @@
   ],
   "products": [
     {
-      "id": "73f5",
+      "id": "cae7",
+      "nombre": "creatina",
+      "precio": "19500",
+      "descripcion": "hydro",
+      "url": "https://www.goodlifecr.com/cdn/shop/files/creatinedecanate_900x.jpg?v=1711041013"
+    },
+    {
+      "id": "3cd0",
       "nombre": "proteina",
-      "precio": "35000",
-      "descripcion": "njoijkolkñ",
+      "precio": "35900",
+      "descripcion": "sin azucar",
+      "url": "https://www.goodlifecr.com/cdn/shop/products/vegangood_900x.png?v=1664654189"
+    },
+    {
+      "id": "96d2",
+      "nombre": "aminoacido",
+      "precio": "25900",
+      "descripcion": "hydraelectrolic",
+      "url": "https://www.goodlifecr.com/cdn/shop/products/MusclemedsAminoDecanate30servidas_900x.png?v=1619713869"
+    },
+    {
+      "id": "4e36",
+      "nombre": "Creatina",
+      "precio": "25900",
+      "descripcion": "60 services",
+      "url": "https://www.goodlifecr.com/cdn/shop/products/jnxcreatina_900x.jpg?v=1679504470"
+    },
+    {
+      "id": "1e77",
+      "nombre": "Proteina",
+      "precio": "30900",
+      "descripcion": "sabor vainilla",
       "url": "https://www.goodlifecr.com/cdn/shop/files/wheygoldstandar2lbras_900x.jpg?v=1698524205"
+    },
+    {
+      "id": "1cde",
+      "nombre": "ganador de peso",
+      "precio": "42900",
+      "descripcion": "sabor galleta",
+      "url": "https://www.goodlifecr.com/cdn/shop/products/mutantmass5lbsvanilla_900x.png?v=1697922127"
+    },
+    {
+      "id": "1e4b",
+      "nombre": "Pre-Entreno",
+      "precio": "25900",
+      "descripcion": "sabor frutas 60 servidas",
+      "url": "https://www.goodlifecr.com/cdn/shop/products/CellucorC460servidasFruitPunch_900x.png?v=1619716490"
     }
   ]
 }
