@@ -3,6 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import usersGET from "../servicios/dataUsers/usersGet";
 import '../styles/login.css'
 import { UsarContexto } from "../context/ContextProvider";
+import SweetAlert2 from 'react-sweetalert2';
+
+
 
 
 function Loginform() {
@@ -12,6 +15,7 @@ const { admin, setAdmin } = UsarContexto()
     const [error, setError] = useState("");
     const [msg, setMsg] = useState("");
     const navigate = useNavigate()
+    const[ SwalProps , setSwalProps] =useState({});
 
     const envioInicio = async () => {
      
@@ -26,7 +30,12 @@ const { admin, setAdmin } = UsarContexto()
         } else {
             if (admi.usuario === usu && admi.contrasena === conta) {
                 setAdmin(admin + 1)
-                alert("bienvenido admi")
+               alert("bienvenido")
+                setSwalProps({
+                    show: true,
+                    title: 'Bienvenido Admi',
+                    text: 'Hello World',
+                });
                 navigate("/añadirproduct")
                 localStorage.setItem("Admi-id", admi.id)
                
@@ -68,7 +77,9 @@ const { admin, setAdmin } = UsarContexto()
             <button><Link to='/registrar'>Ir a registrarme</Link></button>
             <button onClick={envioInicio}>Iniciar</button>
         </div>
+        <SweetAlert2 {...SwalProps} />
         </div>
+       
 </div>
 
     );
