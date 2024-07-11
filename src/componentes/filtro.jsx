@@ -1,35 +1,26 @@
-import  { useState } from 'react';
-
+import { useState } from 'react';
 const ListaElementos = () => {
-  const [elementos, ] = useState([
+  const [elementos] = useState([
     { id: 1, nombre: 'Elemento 1', categoria: 'A' },
     { id: 2, nombre: 'Elemento 2', categoria: 'B' },
     { id: 3, nombre: 'Elemento 3', categoria: 'A' },
     { id: 4, nombre: 'Elemento 4', categoria: 'C' },
   ]);
-
   const [filtroNombre, setFiltroNombre] = useState('');
   const [filtroCategoria, setFiltroCategoria] = useState('');
-
   const handleNombreChange = (e) => {
     setFiltroNombre(e.target.value);
   };
-
   const handleCategoriaChange = (e) => {
     setFiltroCategoria(e.target.value);
   };
-
   const handleBuscarClick = () => {
-   
     console.log('Buscando:', filtroNombre);
-   
   };
-
   const elementosFiltrados = elementos.filter((elemento) =>
     (filtroCategoria ? elemento.categoria === filtroCategoria : true) &&
-    (filtroNombre ? elemento.nombre.toLowerCase().includes(filtroNombre.toLowerCase()) : true)
+    (filtroNombre ? elemento.nombre.toLowerCase().startsWith(filtroNombre.toLowerCase()) : true)
   );
-
   return (
     <div>
       <h2>Lista de Elementos</h2>
@@ -58,5 +49,4 @@ const ListaElementos = () => {
     </div>
   );
 };
-
 export default ListaElementos;
