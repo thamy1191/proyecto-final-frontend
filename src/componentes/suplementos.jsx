@@ -19,12 +19,12 @@ const Suplemento= () => {
     <div>
       <div>
         <h4>Productos Disponibles</h4>
-        <br />
+        
     </div>
     <div className='productos'>
        {products.map((produc, index) => (
           <ul key={index}>
-            <Card style={{ width: '14rem', fontFamily : "Sterling" }}>
+            <Card style={{ width: '-30rem', fontFamily : "Sterling" }}>
               <Card.Img variant="top" src= {produc.url} />
               <Card.Body>
                 <Card.Title>{produc.nombre}</Card.Title>
