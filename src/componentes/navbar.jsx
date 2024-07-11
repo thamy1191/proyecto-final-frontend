@@ -29,107 +29,87 @@ function NavScrollExample() {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary" >
-  <div className="container-fluid" >
-    
-    <Link 
+    <header>
+   
+    <div className="container-fluid">
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      ></button>
+      
+      <ul className="cajaLista">
 
-     className="nav-link" style={{color: "white"}}
-          to="/home">
-          <p>Home</p>
-        </Link>
-       
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav">
-       
-         
-        <li className="nav-item">
-
-        <Link 
-         className="nav-link" style={{color: "white"}}
-
-          to="/suplementos"
-         
-        >
-          <p>Suplementos</p>
-        </Link>
-
-          {/* <a className="nav-link"
-          
-          href="/Suplementos"
-          
-          style={{color: "white"}}>suplementos</a> */}
+        <li>
+      <Link className="nav-link" style={{ color: "white" }} to="/home">
+        <p>Home</p>
+      </Link>
         </li>
-        <li className="nav-item">
-        
-        
-          {/* <a className="nav-link" href="/añadir" style={{color: "white"}}>Administracion</a> */}
-          <Link
-             className="nav-link" style={{color: "white"  ,display: ver}}
-          to="/añadirproduct"
-          
-        >
-          <p>Administracion</p>
-        </Link>
-        
-       
-        </li>
-        <li className="nav-item">
-         
-         
-          {/* <a className="nav-link" href="/contacto" style={{color: "white"}}>Contacto</a> */}
-       
-          <Link
-             className="nav-link" style={{color: "white"}}
-          to="/contacto"
-          
-        >
-          <p>Contacto</p>
-        </Link>
-       
-       
-        </li>
-        <li className="nav-item">
-          {/* <a className="nav-link" href="/login" style={{color: "white"}}>Cuenta</a> */}
-       
-          <Link
-             className="nav-link" style={{color: "white"}}
-          to="/login"
-          
-        >
-          <p>Cuenta</p>
-        </Link>
 
-
-        </li>
-        <li className="nav-item">
-          {/* <a className="nav-link" href="/login" style={{color: "white"}}>Cuenta</a> */}
-       
+        <li >
           <Link
-             className="nav-link" style={{color: "white"}}
-          to="/aboutUs"
-          
-        >
-          <p>About</p>
-        </Link>
+            className="nav-link"
+            style={{ color: "white" }}
+            to="/suplementos"><p>Suplementos</p></Link>
+        </li>
 
-       
+        <li >
+          <Link
+            className="nav-link"
+            style={{ color: "white", display: ver }}to="añadirproduct">
+            <p>Administracion</p>
+          </Link>
+
         </li>
         <li>
-           <Link to={"/home"}>
-            <button onClick={quitar} style={{display : boton}}>Salir</button>
+          <Link
+            className="nav-link"
+            style={{ color: "white" }}
+            to="/contacto"
+          >
+            <p>Contacto</p>
+          </Link>
+
+        </li>
+
+        <li >
+
+          <Link className="nav-link" style={{ color: "white" }} to="/login">
+            <p>Cuenta</p>
           </Link>
         </li>
-        
-        
+
+        <li>
+
+          <Link className="nav-link" style={{ color: "white" }} to="/aboutUs">
+            <p>About</p>
+
+          </Link>
+
+        </li>
+
+        <li>
+
+          <Link to={"/home"}>
+
+            <button onClick={quitar} style={{ display: boton }}>
+
+              Salir
+
+            </button>
+
+          </Link>
+
+        </li>
       </ul>
     </div>
-  </div>
-</nav>
-  );
+
+</header>
+);
 }
 
 export default NavScrollExample;

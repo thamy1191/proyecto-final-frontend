@@ -2,12 +2,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    /* background-image: url('https://media.gq.com.mx/photos/5f4d58354771415bd65686fa/16:9/w_1920,c_limit/proteina%20ejercicio.jpg'); */
-     /* Ajusta la ruta según donde hayas colocado tu imagen */
-    background-size: cover;
-    background-position: center;
     height: 100vh; 
-    
+    background-image: url("/src/assets/StockCake-Gym\ Dumbbell\ Set_1720326140.jpg");
+   background: cover;
+    backdrop-filter: blur();
+
 }
 
 .container {
@@ -21,15 +20,17 @@ body {
 
 
 .login {
-    max-width: 300px;
-    margin-left: 10%;
-     /* margin-top: 10%;  */
-    padding: 20px;
-    border: 1px solid #96353550;
-    border-radius: 5px;
-    background-color: rgba(228, 161, 161, 0.187);
-    box-shadow: 10 10 10px rgba(105, 35, 35, 0.804);
-   
+    width: 500px;
+    height: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 100px;
+    font-family: 'calibri';
+    border: 2px solid #ffffff97;
+    background-color: rgba(25, 25, 25, 0.118);
+    backdrop-filter: blur(0.6rem);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.126);
 }
 
 .login h3 {
@@ -49,24 +50,27 @@ body {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
-    border: 1px solid #f0eeeeea;
-    border-radius: 3px;
+    border: 0px solid transparent;
+    border-bottom: 2px solid #ffffffa8;
     box-sizing: border-box;
+    border-radius: 1px;
+    background-color: transparent;
    
 }
 
 .login button {
-    background-color: #ea14145b;
-    color: white;
+    background-color: #3f405200;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 5px 5px;
     cursor: pointer;
     border-radius: 3px;
+    margin: 15%;
     font-size: 16px;
 }
 
 .login button:hover {
-    background-color: #dc1c3c;
+    background-color: #27272700;
 }
 
 .login button a {
@@ -81,19 +85,11 @@ body {
 .log{
     height: 1000px;
     width: 100%;
-    /* background-color: black; */
-    /* background-image: url("../img/hom.webp"); */
-    background-size: cover;
-    background-repeat: no-repeat;
     }
 
     .pad{
 padding: 5%;
 height: 600px;
 width: 100%;
-
-background-image: url("../img/fitness_720.png");
-background-size: cover;
-background-repeat: no-repeat;
-
-    }
+height: 100%;
+}

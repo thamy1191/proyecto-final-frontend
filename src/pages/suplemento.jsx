@@ -1,6 +1,6 @@
 import Suplemento from "../componentes/suplementos"
-import ListaElementos from "../componentes/filtro"
-import FilterSearch from "../componentes/filtroejemeplo"
+// import ListaElementos from "../componentes/filtro"
+// import FilterSearch from "../componentes/filtroejemeplo"
 
 
 function Suplements() {
@@ -9,9 +9,9 @@ function Suplements() {
     
     <div>
      <Suplemento/>
-     <ListaElementos/>
+     {/* <ListaElementos/>
      <FilterSearch/>
-     
+      */}
          
     </div>
   )
