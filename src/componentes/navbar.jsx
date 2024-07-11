@@ -27,89 +27,89 @@ function NavScrollExample() {
     localStorage.removeItem("Admi-id")
     setAdmin(admin + 1)
   }
-
   return (
     <header>
    
-    <div className="">
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      ></button>
-      
-      <ul className="cajaLista">
+      <div className="container-fluid">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        ></button>
+        
+        <ul className="cajaLista">
 
-        <li>
-      <Link className="nav-link" style={{ color: "white" }} to="/home">
-        <p>Home</p>
-      </Link>
-        </li>
+          <li>
+        <Link className="nav-link" style={{ color: "white" }} to="/home">
+          <p>Home</p>
+        </Link>
+          </li>
 
-        <li >
-          <Link
-            className="nav-link"
-            style={{ color: "white" }}
-            to="/suplementos"><p>Suplementos</p></Link>
-        </li>
+          <li >
+            <Link
+              className="nav-link"
+              style={{ color: "white" }}
+              to="/suplementos"><p>Suplementos</p></Link>
+          </li>
 
-        <li >
-          <Link
-            className="nav-link"
-            style={{ color: "white", display: ver }}to="añadirproduct">
-            <p>Administracion</p>
-          </Link>
+          <li >
+            <Link
+              className="nav-link"
+              style={{ color: "white", display: ver }}to="añadirproduct">
+              <p>Administracion</p>
+            </Link>
 
-        </li>
-        <li>
-          <Link
-            className="nav-link"
-            style={{ color: "white" }}
-            to="/contacto"
-          >
-            <p>Contacto</p>
-          </Link>
+          </li>
+          <li>
+            <Link
+              className="nav-link"
+              style={{ color: "white" }}
+              to="/contacto"
+            >
+              <p>Contacto</p>
+            </Link>
 
-        </li>
+          </li>
 
-        <li >
+          <li >
 
-          <Link className="nav-link" style={{ color: "white" }} to="/login">
-            <p>Cuenta</p>
-          </Link>
-        </li>
+            <Link className="nav-link" style={{ color: "white" }} to="/login">
+              <p>Cuenta</p>
+            </Link>
+          </li>
 
-        <li>
+          <li>
 
-          <Link className="nav-link" style={{ color: "white" }} to="/aboutUs">
-            <p>About</p>
+            <Link className="nav-link" style={{ color: "white" }} to="/aboutUs">
+              <p>About</p>
 
-          </Link>
+            </Link>
 
-        </li>
+          </li>
 
-        <li>
+          <li>
 
-          <Link to={"/home"}>
+            <Link to={"/home"}>
 
-            <button onClick={quitar} style={{ display: boton }}>
+              <button onClick={quitar} style={{ display: boton }}>
 
-              Salir
+                Salir
 
-            </button>
+              </button>
 
-          </Link>
+            </Link>
 
-        </li>
-      </ul>
-    </div>
+          </li>
+        </ul>
+      </div>
 
-</header>
-);
+  </header>
+  );
+  
 }
 
 export default NavScrollExample;

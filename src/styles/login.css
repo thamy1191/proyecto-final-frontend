@@ -3,10 +3,10 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     height: 100vh; 
-    /* background-image: url("/src/assets/StockCake-Gym\ Dumbbell\ Set_1720326140.jpg"); */
+   
    background: cover;
     backdrop-filter: blur();
-    background-color: white;
+    background-color: rgb(254, 254, 254);
 
 }
 
@@ -28,14 +28,14 @@ body {
     margin: auto;
     margin-top: 100px;
     font-family: 'calibri';
-    border: 2px solid #ffffff97;
+    border: 2px solid #0f0f0f97;
     background-color: rgba(25, 25, 25, 0.118);
     backdrop-filter: blur(0.6rem);
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.126);
 }
 
 .login h3 {
-    color: white;
+    color: rgb(7, 7, 7);
     font-size: 16px;
     margin-bottom: 10px;
 }
@@ -43,7 +43,7 @@ body {
 .login label {
     display: block;
     margin-bottom: 5px;
-    color: white;
+    color: rgb(8, 8, 8);
 }
 
 .login input[type="text"],
@@ -52,7 +52,7 @@ body {
     padding: 8px;
     margin-bottom: 10px;
     border: 0px solid transparent;
-    border-bottom: 2px solid #ffffffa8;
+    border-bottom: 2px solid #0a0a0aa8;
     box-sizing: border-box;
     border-radius: 1px;
     background-color: transparent;
@@ -61,7 +61,7 @@ body {
 
 .login button {
     background-color: #3f405200;
-    color: rgb(255, 255, 255);
+    color: rgb(5, 4, 4);
     border: none;
     padding: 5px 5px;
     cursor: pointer;
@@ -76,7 +76,7 @@ body {
 
 .login button a {
     text-decoration: none;
-    color: white;
+    color: rgb(15, 15, 15);
 }
 
 .login button a:hover {

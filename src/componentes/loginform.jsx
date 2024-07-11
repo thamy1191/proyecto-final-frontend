@@ -8,6 +8,8 @@ import SweetAlert2 from 'react-sweetalert2';
 
 
 
+
+
 function Loginform() {
     const { admin, setAdmin } = UsarContexto()
     const [usu, setUsu] = useState("");
@@ -62,7 +64,7 @@ function Loginform() {
 
     return (
 <div className="pad">
-
+<img className="about" src='src\assets\pesas.jpg' /> 
         <div className="log">
 
         <div className="login">

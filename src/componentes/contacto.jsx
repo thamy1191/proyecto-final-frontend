@@ -1,5 +1,9 @@
 import  { useState } from 'react';
+
+import Fit from '../img/p.jpg'
 import "../styles/contact.css"
+
+
 
 const Contacto = () => {
   const [nombre, setNombre] = useState('');
@@ -18,6 +22,9 @@ const Contacto = () => {
 
   return (
     <div className="contacto-container"> 
+    
+    <img src={Fit}/>
+    
       <h1>Contáctanos</h1>
       <form className="contacto-form" onSubmit={handleSubmit}> 
         <div>

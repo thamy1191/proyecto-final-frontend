@@ -1,5 +1,6 @@
 
 import DarkVariantExample from "./carrusel"
+import "../styles/añadir.css"
 
 
 
