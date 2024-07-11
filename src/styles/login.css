@@ -3,9 +3,10 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     height: 100vh; 
-    background-image: url("/src/assets/StockCake-Gym\ Dumbbell\ Set_1720326140.jpg");
+    /* background-image: url("/src/assets/StockCake-Gym\ Dumbbell\ Set_1720326140.jpg"); */
    background: cover;
     backdrop-filter: blur();
+    background-color: white;
 
 }
 

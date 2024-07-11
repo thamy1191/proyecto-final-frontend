@@ -9,7 +9,7 @@ function homewelcome() {
     <div>
      
       
-      <img className="homeimg" src='https://c4.wallpaperflare.com/wallpaper/95/686/440/training-gyms-motivational-typography-wallpaper-preview.jpg' />
+       <img className="homeimg" src='src\assets\header.jpg' /> 
 
        <h1 className="home">Los mas vistos</h1>
 

@@ -31,7 +31,7 @@ function NavScrollExample() {
   return (
     <header>
    
-    <div className="container-fluid">
+    <div className="">
       <button
         className="navbar-toggler"
         type="button"
